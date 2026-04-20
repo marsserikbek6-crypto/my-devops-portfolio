@@ -1,0 +1,270 @@
+/* ===========================
+   Mars Serikbek — Portfolio CSS
+   =========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue-100: #B5D4F4;
+  --blue-200: #85B7EB;
+  --blue-400: #378ADD;
+  --blue-600: #185FA5;
+  --blue-800: #0C447C;
+  --blue-900: #042C53;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, #042C53 0%, #0C447C 40%, #185FA5 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---- HEADER ---- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 24px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 72px;
+  animation: fadeUp 0.6s ease forwards 0.1s;
+  opacity: 0;
+}
+
+.logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--blue-200);
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ---- HERO ---- */
+.hero {
+  margin-bottom: 80px;
+  animation: fadeUp 0.7s ease forwards 0.25s;
+  opacity: 0;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 6px 16px 6px 10px;
+  font-size: 12px;
+  color: var(--blue-100);
+  letter-spacing: 0.5px;
+  margin-bottom: 28px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 8vw, 80px);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--blue-200);
+}
+
+.hero-bio {
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 560px;
+  font-weight: 300;
+}
+
+/* ---- SKILLS ---- */
+.skills-section {
+  margin-bottom: 72px;
+  animation: fadeUp 0.7s ease forwards 0.45s;
+  opacity: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--blue-200);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px 20px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.skill-card:hover {
+  background: rgba(255, 255, 255, 0.10);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.skill-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.skill-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.skill-bar-wrap {
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  height: 3px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 3px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--blue-200), #85B7EB);
+  animation: growBar 1.2s ease forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@keyframes growBar {
+  to { transform: scaleX(1); }
+}
+
+/* ---- DIVIDER ---- */
+.divider {
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 72px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  animation: fadeUp 0.7s ease forwards 0.65s;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.deploy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.deploy-badge strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.checkmark {
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 42px; }
+  nav { display: none; }
+}
