@@ -1,6 +1,4 @@
-/* ===========================
-   Mars Serikbek — Portfolio CSS
-   =========================== */
+/* Mars Serikbek — Portfolio CSS */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -11,9 +9,6 @@
 :root {
   --blue-100: #B5D4F4;
   --blue-200: #85B7EB;
-  --blue-400: #378ADD;
-  --blue-600: #185FA5;
-  --blue-800: #0C447C;
   --blue-900: #042C53;
 }
 
@@ -30,22 +25,20 @@ body {
   padding: 0 24px 80px;
 }
 
-/* ---- HEADER ---- */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 0 24px;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 0.5px solid rgba(255,255,255,0.15);
   margin-bottom: 72px;
-  animation: fadeUp 0.6s ease forwards 0.1s;
   opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.1s;
 }
 
 .logo {
   font-family: 'DM Serif Display', serif;
   font-size: 20px;
-  letter-spacing: -0.5px;
   color: #fff;
 }
 
@@ -54,41 +47,33 @@ header {
   font-style: italic;
 }
 
-nav {
-  display: flex;
-  gap: 24px;
-}
+nav { display: flex; gap: 24px; }
 
 nav a {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
-  letter-spacing: 0.5px;
   transition: color 0.2s;
 }
 
-nav a:hover {
-  color: #fff;
-}
+nav a:hover { color: #fff; }
 
-/* ---- HERO ---- */
 .hero {
   margin-bottom: 80px;
-  animation: fadeUp 0.7s ease forwards 0.25s;
   opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.25s;
 }
 
 .role-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.08);
+  border: 0.5px solid rgba(255,255,255,0.2);
   border-radius: 100px;
   padding: 6px 16px 6px 10px;
   font-size: 12px;
   color: var(--blue-100);
-  letter-spacing: 0.5px;
   margin-bottom: 28px;
 }
 
@@ -122,16 +107,15 @@ h1 em {
 .hero-bio {
   font-size: 17px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 560px;
+  color: rgba(255,255,255,0.75);
+  max-width: 580px;
   font-weight: 300;
 }
 
-/* ---- SKILLS ---- */
 .skills-section {
   margin-bottom: 72px;
-  animation: fadeUp 0.7s ease forwards 0.45s;
   opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.45s;
 }
 
 .section-label {
@@ -150,8 +134,8 @@ h1 em {
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 24px 20px;
   transition: background 0.2s, transform 0.2s;
@@ -159,32 +143,17 @@ h1 em {
 }
 
 .skill-card:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255,255,255,0.10);
   transform: translateY(-3px);
 }
 
-.skill-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.skill-name {
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 6px;
-}
-
-.skill-desc {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.5;
-}
+.skill-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+.skill-name { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+.skill-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
 
 .skill-bar-wrap {
   margin-top: 14px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
   border-radius: 100px;
   height: 3px;
   overflow: hidden;
@@ -199,21 +168,17 @@ h1 em {
   transform: scaleX(0);
 }
 
-@keyframes growBar {
-  to { transform: scaleX(1); }
-}
+@keyframes growBar { to { transform: scaleX(1); } }
 
-/* ---- DIVIDER ---- */
 .divider {
   height: 0.5px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
   margin-bottom: 72px;
 }
 
-/* ---- FOOTER ---- */
 footer {
-  animation: fadeUp 0.7s ease forwards 0.65s;
   opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.65s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,44 +190,31 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.15);
   border-radius: 100px;
   padding: 8px 18px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255,255,255,0.6);
 }
 
-.deploy-badge strong {
-  color: #fff;
-  font-weight: 500;
-}
+.deploy-badge strong { color: #fff; font-weight: 500; }
 
 .checkmark {
-  width: 14px;
-  height: 14px;
+  width: 14px; height: 14px;
   background: #22c55e;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  flex-shrink: 0;
-  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; color: #fff; flex-shrink: 0;
 }
 
-.copyright {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
-}
+.copyright { font-size: 12px; color: rgba(255,255,255,0.3); }
 
-/* ---- ANIMATIONS ---- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- RESPONSIVE ---- */
 @media (max-width: 600px) {
   .skills-grid { grid-template-columns: 1fr; }
   h1 { font-size: 42px; }
